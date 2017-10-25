@@ -11,7 +11,20 @@
 ;
 ;You may delete these comments!
 
-(provide ins_beg)
+;A
+(define (ins_beg a b)         
+  (cons a b))                 
 
-(define (ins_beg el lst)
-  (display "Hello, I'm ins_beg!\n"))
+(ins_beg 'a '(b c d))
+(ins_beg '(a b) '(b c d))
+
+;B
+(define (ins_end a b)        
+  (append b (list a)))
+
+(ins_end 'a '(b c d))
+(ins_end '(a b) '(b c d))
+
+;C
+
+
